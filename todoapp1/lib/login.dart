@@ -3,7 +3,7 @@ import 'package:todoapp1/const/colors.dart';
 
 class LogIN_Screen extends StatefulWidget {
   final VoidCallback show;
-  LogIN_Screen(this.show, {super.key});
+  const LogIN_Screen(this.show, {super.key});
 
   @override
   State<LogIN_Screen> createState() => _LogIN_ScreenState();
@@ -75,7 +75,7 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
 
   Widget account() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -85,7 +85,7 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
           ),
           const SizedBox(width: 5),
           GestureDetector(
-            onTap: Widget.show,
+            onTap: () {},
             child: const Text(
               "SignUp",
               style: TextStyle(
@@ -119,8 +119,12 @@ class _LogIN_ScreenState extends State<LogIN_Screen> {
     );
   }
 
-  Widget textField(TextEditingController _controller, FocusNode _focusNode,
-      String typeName, IconData iconss) {
+  Widget textField(
+    TextEditingController _controller,
+    FocusNode _focusNode,
+    String typeName,
+    IconData iconss,
+  ) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
